@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { CiHeart } from "react-icons/ci";
 import { FaRegEye } from "react-icons/fa6";
-import img from "../image/vector2.png"
+import img from "../image/vector.png"
 export default function Product({data}) {
 
 
