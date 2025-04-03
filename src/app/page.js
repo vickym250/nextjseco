@@ -28,7 +28,7 @@ export default function Home() {
     },
    
     {
-      "title": "IPS LCD Gaming Monitor",
+      "title": "IPS LD Gaming Monitor",
       "price": 100,
       "img": img
     },
