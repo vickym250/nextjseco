@@ -22,90 +22,11 @@ export default function Home() {
 
   let data = [
     {
-      title: "IPS LCD Gaming Monitor",
-      price: 100,
-      img: img
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
     },
-    {
-      title: "IPS LCD Gaming Monitor",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "IPS LCD Gaming Monitor",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "IPS LCD Gaming Monitor",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "IPS LCD Gaming Monitor",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
-    {
-      title: "hello",
-      price: 100,
-      img: img,
-    },
+   
   ]
  
   let left = () => {
