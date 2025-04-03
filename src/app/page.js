@@ -17,30 +17,8 @@ import Bestsale from "./Component/Bestsale";
 export default function Home() {
 
   let [scrol, setscrol] = useState(0)
-  console.log(scrol);
-  
-  let left = () => {
-    console.log(data.length-4);
-    
-    if (scrol == 0) {
-      return
-    }
-    setscrol(scrol - 1)
-
-
-  }
-
-  let right = () => {
-    
-    
-    if(data.length-4==scrol){
-
-      return false
-    }
-
-    setscrol(scrol + 1)
-  }
-
+ 
+ 
 
   let data = [
     {
@@ -129,7 +107,32 @@ export default function Home() {
       img: img,
     },
   ]
+ 
+  let left = () => {
+    console.log(data.length-4);
+    
+    if (scrol == 0) {
+      return
+    }
+    setscrol(scrol - 1)
 
+
+  }
+
+  let right = () => {
+    
+    
+    if(data.length-4==scrol){
+
+      return false
+    }
+
+    setscrol(scrol + 1)
+  }
+
+
+
+  
 
   return (
     <>
