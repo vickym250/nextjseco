@@ -27,6 +27,39 @@ export default function Home() {
       "img": img
     },
    
+    {
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
+    },
+   
+    {
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
+    },
+   
+    {
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
+    },
+    {
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
+    },
+    {
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
+    },
+    {
+      "title": "IPS LCD Gaming Monitor",
+      "price": 100,
+      "img": img
+    },
+   
   ]
  
   let left = () => {
