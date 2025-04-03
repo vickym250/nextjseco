@@ -1,0 +1,18 @@
+
+.background1{
+    background-image: url('../image/combanner.png');
+}
+.container1{
+    background-image: url('../image/sound.png');
+}
+.beauty{
+    background-image: url('../image/beauty.png') ;
+    background-size: cover;
+   
+}
+.minidj{
+     background-image:url('../image/djmin.png');
+}
+.per{
+    background-image: url('../image/perfum.png');
+}

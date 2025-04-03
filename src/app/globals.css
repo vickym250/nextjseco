@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  margin: 0px;
+  padding: 0px;
+  --background: #ffffff;
+  --foreground: #f5eeee;
+  font-family: sans-serif;
+}
+.cart{
+display: none;
+transition: 1s;
+}
+.main:hover .cart{
+  display: block;
+}
