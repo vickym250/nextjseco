@@ -113,7 +113,7 @@ export default function Bestsale() {
 </div>
    
    <div className='container mx-auto flex  justify-between  items-center'>
-    <h1 className='text-2xl '>Best Selling Products</h1>
+    <h1 className='text-2xl '>Best Vicky250 Selling Products</h1>
     <button onClick={toggle} className='text-2xl py-2 px-3 bg-amber-400  rounded-md'  >{show?"Close All " : "View All"}</button>
    </div>
   <div className={ ` grid  justify-center  md:grid-cols-4 grid-rows-1 container mx-auto mt-5 `}>
