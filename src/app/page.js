@@ -17,51 +17,8 @@ import Bestsale from "./Component/Bestsale";
 export default function Home() {
 
   let [scrol, setscrol] = useState(0)
- 
- 
-
-  let data = [
-    {
-      "title": "IPS LCD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-   
-    {
-      "title": "IPS LD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-   
-    {
-      "title": "IPS LCD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-   
-    {
-      "title": "IPS LCD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-    {
-      "title": "IPS LCD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-    {
-      "title": "IPS LCD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-    {
-      "title": "IPS LCD Gaming Monitor",
-      "price": 100,
-      "img": img
-    },
-   
-  ]
- 
+  console.log(scrol);
+  
   let left = () => {
     console.log(data.length-4);
     
@@ -85,8 +42,94 @@ export default function Home() {
   }
 
 
+  let data = [
+    {
+      title: "IPS LCD Gaming Monitor",
+      price: 100,
+      img: img
+    },
+    {
+      title: "IPS LCD Gaming Monitor",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "IPS LCD Gaming Monitor",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "IPS LCD Gaming Monitor",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "IPS LCD Gaming Monitor",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+    {
+      title: "hello",
+      price: 100,
+      img: img,
+    },
+  ]
 
-  
 
   return (
     <>
@@ -105,15 +148,17 @@ export default function Home() {
       <div className=" flex  gap-13 hide-scroll-bar overflow-x-hidden  mt-10 container mx-auto">
         {data.map((item, index) => {
           return (
-            <div  key={index} style={
+            
+            <div key={index} style={
               {
                 transform: `translateX(-${scrol * 300}px)`,
                 transition: 'transform 0.5s ease-in-out',
               }
             }>
-              <Product data={item} />
+              <Product  data={item} />
 
             </div>
+            
           )
         })}
 
