@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import "./co.css";
+
+import dj from "../image/dj.png"
 import Image from 'next/image';
-import img from '../image/JBL_BOOMBOX_2_HERO_020_x1 (1) 1.png'
 
 export default function ComingPro() {
   let [day,setday]=useState(0)
@@ -82,7 +83,7 @@ useEffect(()=>{
         </div>
        </div>
        <div className='w-1/2 '>
-        <Image src={img} className='mt-10'/>
+        <Image src={dj} className='mt-10'/>
        </div>
     </div>
   )

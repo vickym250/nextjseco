@@ -148,15 +148,17 @@ export default function Home() {
       <div className=" flex  gap-13 hide-scroll-bar overflow-x-hidden  mt-10 container mx-auto">
         {data.map((item, index) => {
           return (
-            <div style={
+            
+            <div key={index} style={
               {
                 transform: `translateX(-${scrol * 300}px)`,
                 transition: 'transform 0.5s ease-in-out',
               }
             }>
-              <Product key={index} data={item} />
+              <Product  data={item} />
 
             </div>
+            
           )
         })}
 

@@ -1,8 +1,9 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react'
 import { CiHeart } from "react-icons/ci";
 import { FaRegEye } from "react-icons/fa6";
-import img from "../image/star.png"
+
 export default function Product({data}) {
 
 
@@ -24,7 +25,7 @@ export default function Product({data}) {
                             <div className='w-[30px] mt-[10px]  h-[30px] rounded-full bg-amber-50 flex items-center justify-center'><FaRegEye /></div>
                         </div>
                     </div>
-                    <Image src={data.img} alt='Product' className='w-[200px] h-[170px] -mt-10 mx-auto'/>
+                   <Link href={'/productinfo'}  > <Image src={data.img} alt='Product' className='w-[200px] h-[170px] -mt-10 mx-auto'/></Link>
                     <button className='w-full absolute bottom-0 h-[30px] bg-black text-white cart '>Add To Cart</button>
                 </div>
                 <div className='text-lg px-2 font-bold'>{data.title}</div>
@@ -34,9 +35,7 @@ export default function Product({data}) {
 
                 </div>
                 <div className=' mx-2 flex gap'>
-                 <Image src={img}/>
-                 <Image src={img}/>
-                 <Image src={img}/>
+                 
                     <div className='ms-2 text-gray-500 text-[14px]'>(99)</div>
                 </div>
                

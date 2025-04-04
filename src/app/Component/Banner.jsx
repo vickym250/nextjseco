@@ -155,8 +155,9 @@ let data = [
             )
           })
         }
+
         
-      
+        
      </div>
      <div className='max-w-full  md:max-w-[79%]  rounded-2xl p-1 '>
      <Slider {...settings}>
@@ -176,3 +177,4 @@ let data = [
     </div>
   )
 }
+
