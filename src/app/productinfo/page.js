@@ -36,7 +36,7 @@ const ProductPage = () => {
             </div>
           <div className="">
         </div><div className="w-[80%] bg-gray-400 rounded-lg p-10">
-          <Image src={game} alt="Gamepad" className="w-full rounded-xl" />
+          <Image src={game} className="w-full rounded-xl" />
           </div>
           </div>
           {/* Product Info */}
