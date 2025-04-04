@@ -147,7 +147,7 @@ const ProductPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map(item => (
               <div key={item} className="border rounded-lg p-4 text-center">
-                <Image src={`/related-${item}.jpg`}  className="w-full h-24 object-cover rounded-md" />
+              
                 <p className="mt-2">Product {item}</p>
               </div>
             ))}
