@@ -144,7 +144,7 @@ let data = [
         
    
   return (
-    <div className=' container flex-col md:flex-row gap-2 mx-auto flex justify-center'>
+    <div className='   container flex-col md:flex-row gap-2 mx-auto flex justify-center'>
      <div className=' hidden md:block max-w-[20%] py-2 border-r-1'>
         {data.slice(0,14).map((item,index)=>{
             return (
@@ -159,8 +159,8 @@ let data = [
         
         
      </div>
-     <div className='max-w-full  md:max-w-[79%]  rounded-2xl p-1 '>
-     <Slider {...settings}>
+     <div className='max-w-full  md:max-w-[79%]   rounded-2xl p-1 '>
+     <Slider {...settings} className=" relative !-z-50" >
         <div className="w-full h-full">
           <Image src={img} alt="Slide 1" className=" w-full rounded-lg " />
         </div>

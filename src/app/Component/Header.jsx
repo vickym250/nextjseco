@@ -3,13 +3,17 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FiAlignJustify } from "react-icons/fi";
-import { CiSearch } from "react-icons/ci";
+
 import { IoCartOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
+import SearchBar from './Search';
+
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+   
+
   return (
     <>
     <div className='w-full  py-1 text-center bg-black'>
@@ -18,7 +22,7 @@ export default function Header() {
 
 <header className='w-full md:border-b-2 '>
 <nav className="bg-white shadow-md p-4 top-1 sticky">
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="container  mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold">Exclusive</div>
         
@@ -35,9 +39,9 @@ export default function Header() {
     
          {/* Icons */}
      
-       <div className=' md:w-[200px] w-1/2 mx-2 visible relative'>
-          <input type="text" placeholder="Search..." className=" w-full  bg-amber-50 px-2 py-1 rounded-md" />
-          <CiSearch className=' absolute right-2 top-0.5 text-2xl font-bold'/>
+       <div className=' md:w-[200px] w-1/2 mx-2 visible  '>
+
+       <SearchBar/>
           </div>
 
           <div className='flex gap-1 md:gap-3 items-center'>
