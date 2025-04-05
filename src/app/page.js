@@ -145,7 +145,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" flex  gap-13 hide-scroll-bar overflow-x-hidden  mt-10 container mx-auto">
+      <div className=" flex relative -z-50  gap-13 hide-scroll-bar overflow-x-hidden  mt-10 container mx-auto">
         {data.map((item, index) => {
           return (
             
