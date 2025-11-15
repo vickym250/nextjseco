@@ -1,5 +1,6 @@
 'use client'
-import Slider from "react-slick";
+
+import dynamic from "next/dynamic";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../image/banner.png";
@@ -7,7 +8,11 @@ import Image from "next/image";
 import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 
+// React Slick FIX: Load only on client
+const Slider = dynamic(() => import("react-slick"), { ssr: false });
+
 export default function Banner() {
+
   const settings = {
     dots: true,
     infinite: true,
@@ -19,33 +24,33 @@ export default function Banner() {
   };
 
   const data = [
-    { slug: "beauty", name: "Beauty", url: "https://dummyjson.com/products/category/beauty", icon: <ChevronRight /> },
-    { slug: "fragrances", name: "Fragrances", url: "https://dummyjson.com/products/category/fragrances", icon: <ChevronRight /> },
-    { slug: "furniture", name: "Furniture", url: "https://dummyjson.com/products/category/furniture", icon: <ChevronRight /> },
-    { slug: "groceries", name: "Groceries", url: "https://dummyjson.com/products/category/groceries", icon: <ChevronRight /> },
-    { slug: "home-decoration", name: "Home Decoration", url: "https://dummyjson.com/products/category/home-decoration", icon: <ChevronRight /> },
-    { slug: "kitchen-accessories", name: "Kitchen Accessories", url: "https://dummyjson.com/products/category/kitchen-accessories", icon: <ChevronRight /> },
-    { slug: "laptops", name: "Laptops", url: "https://dummyjson.com/products/category/laptops", icon: <ChevronRight /> },
-    { slug: "mens-shirts", name: "Mens Shirts", url: "https://dummyjson.com/products/category/mens-shirts", icon: <ChevronRight /> },
-    { slug: "mens-shoes", name: "Mens Shoes", url: "https://dummyjson.com/products/category/mens-shoes", icon: <ChevronRight /> },
-    { slug: "mens-watches", name: "Mens Watches", url: "https://dummyjson.com/products/category/mens-watches", icon: <ChevronRight /> },
-    { slug: "mobile-accessories", name: "Mobile Accessories", url: "https://dummyjson.com/products/category/mobile-accessories", icon: <ChevronRight /> },
-    { slug: "motorcycle", name: "Motorcycle", url: "https://dummyjson.com/products/category/motorcycle", icon: <ChevronRight /> },
-    { slug: "skin-care", name: "Skin Care", url: "https://dummyjson.com/products/category/skin-care", icon: <ChevronRight /> },
-    { slug: "smartphones", name: "Smartphones", url: "https://dummyjson.com/products/category/smartphones", icon: <ChevronRight /> },
+    { name: "Beauty", url: "https://dummyjson.com/products/category/beauty", icon: <ChevronRight /> },
+    { name: "Fragrances", url: "https://dummyjson.com/products/category/fragrances", icon: <ChevronRight /> },
+    { name: "Furniture", url: "https://dummyjson.com/products/category/furniture", icon: <ChevronRight /> },
+    { name: "Groceries", url: "https://dummyjson.com/products/category/groceries", icon: <ChevronRight /> },
+    { name: "Home Decoration", url: "https://dummyjson.com/products/category/home-decoration", icon: <ChevronRight /> },
+    { name: "Kitchen Accessories", url: "https://dummyjson.com/products/category/kitchen-accessories", icon: <ChevronRight /> },
+    { name: "Laptops", url: "https://dummyjson.com/products/category/laptops", icon: <ChevronRight /> },
+    { name: "Mens Shirts", url: "https://dummyjson.com/products/category/mens-shirts", icon: <ChevronRight /> },
+    { name: "Mens Shoes", url: "https://dummyjson.com/products/category/mens-shoes", icon: <ChevronRight /> },
+    { name: "Mens Watches", url: "https://dummyjson.com/products/category/mens-watches", icon: <ChevronRight /> },
+    { name: "Mobile Accessories", url: "https://dummyjson.com/products/category/mobile-accessories", icon: <ChevronRight /> },
+    { name: "Motorcycle", url: "https://dummyjson.com/products/category/motorcycle", icon: <ChevronRight /> },
+    { name: "Skin Care", url: "https://dummyjson.com/products/category/skin-care", icon: <ChevronRight /> },
+    { name: "Smartphones", url: "https://dummyjson.com/products/category/smartphones", icon: <ChevronRight /> },
   ];
 
   return (
     <div className="container mx-auto flex flex-col md:flex-row gap-3 py-3">
 
-      {/* LEFT CATEGORY MENU */}
-      <div className="hidden md:block max-w-[20%] border-r pr-3">
+      {/* LEFT SIDE MENU */}
+      <div className="hidden md:block w-[20%] border-r pr-3">
         {data.map((item, index) => (
           <Link
             key={index}
             href={item.url}
-            className="flex justify-between items-center px-2 py-1 text-[17px] font-medium 
-            text-blue-700 hover:text-blue-500 transition-all"
+            className="flex justify-between items-center px-2 py-1 
+            text-[17px] font-medium text-blue-700 hover:text-blue-500 transition-all"
           >
             {item.name}
             {item.icon}
@@ -53,17 +58,17 @@ export default function Banner() {
         ))}
       </div>
 
-      {/* RIGHT SLIDER */}
-      <div className="w-full md:max-w-[80%] rounded-2xl overflow-hidden">
+      {/* RIGHT SIDE SLIDER */}
+      <div className="w-full md:w-[80%] rounded-2xl overflow-hidden min-h-[230px]">
         <Slider {...settings}>
           <div>
-            <Image src={img} alt="Slide 1" className="w-full rounded-xl" />
+            <Image src={img} alt="Slide 1" priority className="w-full rounded-xl" />
           </div>
           <div>
-            <Image src={img} alt="Slide 2" className="w-full rounded-xl" />
+            <Image src={img} alt="Slide 2" priority className="w-full rounded-xl" />
           </div>
           <div>
-            <Image src={img} alt="Slide 3" className="w-full rounded-xl" />
+            <Image src={img} alt="Slide 3" priority className="w-full rounded-xl" />
           </div>
         </Slider>
       </div>
